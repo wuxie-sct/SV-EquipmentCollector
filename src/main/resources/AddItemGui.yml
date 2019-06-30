@@ -1,0 +1,43 @@
+#这里是为部分不支持 物品拖动的服务端 设计 的，改为true，则装备物品的界面为箱子gui
+EnableChest: false
+#这是添加装备的gui设置
+x: -1
+y: -1
+w: 238
+h: 191
+# 玩家 物品槽 的位置
+#X轴向右数
+slotleft: 40
+#y轴向下数
+slottop: 113
+#gui的贴图位置
+url: '[local]additem.png'
+#放置物品的槽位位置
+Slot:
+  x: 111
+  y: 32
+#确定装备的按钮
+yesButton:
+  id: 6666
+  name: '确定'
+  url1: '[local]Button.png'
+  url2: '[local]Button_.png'
+  x: 78
+  y: 60
+  w: 40
+  h: 20
+  text:
+  - '§7点击确定穿上该装备！'
+#不确定装备的按钮
+noButton:
+  id: 6667
+  name: '取消'
+  url1: '[local]Button.png'
+  url2: '[local]Button_.png'
+  x: 122
+  y: 60
+  w: 40
+  h: 20
+  text:
+  - '§7点击取消！'
+

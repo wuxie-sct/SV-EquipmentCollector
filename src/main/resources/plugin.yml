@@ -1,0 +1,12 @@
+name: SV-Equipment
+version: ${project.version}
+main: me.wuxie.sv.svequipment.SVEquipment
+depend:
+- VexView
+- SX-Attribute
+softdepend:
+- SxGem
+- DataSharing
+authors: [wuxie]
+commands:
+  sve:

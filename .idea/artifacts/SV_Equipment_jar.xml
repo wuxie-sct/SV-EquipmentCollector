@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SV-Equipment:jar">
+    <output-path>D:/MyPlugin</output-path>
+    <root id="archive" name="[去验证版]SV-Equipment.jar">
+      <element id="module-output" name="SV-Equipment" />
+    </root>
+  </artifact>
+</component>

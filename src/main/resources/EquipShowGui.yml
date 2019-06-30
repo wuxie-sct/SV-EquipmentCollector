@@ -1,0 +1,329 @@
+#主要的gui背景贴图位置 -1 为屏幕中央
+#x轴坐标位置
+x: -1
+#y轴坐标位置
+y: -1
+#w图片显示宽度
+w: 200
+#h图片显示高度
+h: 240
+#贴图的位置，尽量作为本地调用
+url: '[local]equipgui.png'
+#玩家模型立绘，既gui界面那个会动的东东
+playerDraw:
+  #是否启用
+  enable: true
+  #位于gui的x轴坐标
+  x: 99
+  #位于gui的y轴坐标
+  y: 166
+  #大小，30为玩家普通背包显示的大小
+  scale: 40
+
+#是否展示原版装备，既头盔，护甲，护腿，靴子，副手，
+#设置为 false 既不在gui内展示，可以腾出槽位，注册更多装备类型
+showInventoryEquipment: true
+#装备栏 - 正常装备的配置区域
+equipment:
+  # 护甲
+  chestplate:
+    # type名字，用于消息提示，无太大作用，但不可无。
+    equipTypeName: '护甲'
+
+    #显示该装备的槽位 在gui上对应的位置设置
+    slot:
+      #位于gui的y轴坐标
+      x: 37
+      #位于gui的y轴坐标
+      y: 48
+    #如果 该装备的名称 在config.yml里面设定过 displayNameUrl 里设定过
+    #装备名称特有的贴图，那么，贴图的设定 如下
+    itemHasImage:
+      #位于gui的x轴坐标
+      x: 37
+      #位于gui的y轴坐标
+      y: 48
+      #宽度
+      w: 25
+      #高度
+      h: 25
+    #操作该装备的按钮设置区域
+    Button:
+      #位于gui的x轴坐标
+      x: 28
+      #位于gui的y轴坐标
+      y: 69
+      #宽度
+      w: 35
+      #高度
+      h: 12
+      #该按钮的1贴图，既未移动鼠标在上时，显示的图案
+      url1: '[local]Button.png'
+      #该按钮的2贴图，既移动鼠标在上时，显示的图案
+      url2: '[local]Button_.png'
+
+      # 添加按钮时的 两种情况 设定
+      #该 装备槽 没有装备时的按钮 设定
+      addButton:
+        #！！！！！！！
+        #！！！！！！！
+        #！！！！！！！
+        #注意 此处 按钮id 必须是一个独一无二的 按钮id 既: 没有出现重复，
+        #在整个使用vv为基础前置的vv附属的按钮里面，都必须是独一无二的
+        #如果id重复了，会有不可预料的情况发生
+        id: 6668
+        #该按钮的展示名称
+        name: '穿上护甲'
+        #鼠标移动到该按钮时，展示的文本
+        text:
+        - '§7点击穿上一件护甲！'
+      #该 装备槽 有装备时的按钮 设定
+      delButton:
+        id: 6669
+        name: '脱下护甲'
+        text:
+        - '§7点击脱下护甲！'
+  #下列不一一例举了，请看下面 otherequipment 项目，如何注册自己的新装备槽位
+  helmet:
+    equipTypeName: '头盔'
+    slot:
+      x: 92
+      y: 48
+    itemHasImage:
+      x: 92
+      y: 48
+      w: 25
+      h: 25
+    Button:
+      x: 83
+      y: 69
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6670
+        name: '穿上头盔'
+        text:
+        - '§7点击穿上一件头盔！'
+      delButton:
+        id: 6671
+        name: '脱下头盔'
+        text:
+        - '§7点击脱下一件头盔！'
+  offhand:
+    equipTypeName: '副手'
+    slot:
+      x: 37
+      y: 90
+    itemHasImage:
+      x: 37
+      y: 90
+      w: 25
+      h: 25
+    Button:
+      x: 28
+      y: 111
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6674
+        name: '穿上副手'
+        text:
+        - '§7点击穿上一件副手！'
+      delButton:
+        id: 6675
+        name: '脱下副手'
+        text:
+        - '§7点击脱下一件副手！'
+  leggings:
+    equipTypeName: '护腿'
+    slot:
+      x: 37
+      y: 131
+    itemHasImage:
+      x: 37
+      y: 131
+      w: 25
+      h: 25
+    Button:
+      x: 28
+      y: 152
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6676
+        name: '穿上护腿'
+        text:
+        - '§7点击穿上一件护腿！'
+      delButton:
+        id: 6677
+        name: '脱下护腿'
+        text:
+        - '§7点击脱下一件护腿！'
+  boots:
+    equipTypeName: '靴子'
+    slot:
+      x: 37
+      y: 170
+    itemHasImage:
+      x: 37
+      y: 170
+      w: 25
+      h: 25
+    Button:
+      x: 28
+      y: 192
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6678
+        name: '穿上靴子'
+        text:
+        - '§7点击穿上一件靴子！'
+      delButton:
+        id: 6679
+        name: '脱下靴子'
+        text:
+        - '§7点击脱下一件靴子！'
+#
+#
+#
+#注册 装备槽位 在下面项，按照此类格式即可
+otherequipment:
+  #注册一个 项链 类型的 装备
+  项链1:
+    #在该物品的lore里加入 项链 字样，即可判断为项链
+    getlore: '项链'
+    #下面的设置如顶上介绍的 既 护甲 类 装备 的设定处 的 介绍。一通百通。
+    equipTypeName: '项链'
+    slot:
+      x: 146
+      y: 48
+    itemHasImage:
+      x: 146
+      y: 48
+      w: 25
+      h: 25
+    Button:
+      x: 137
+      y: 69
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6680
+        name: '挂上项链'
+        text:
+        - '§7点击穿上一件项链！'
+      delButton:
+        id: 6681
+        name: '取下项链'
+        text:
+        - '§7点击脱下一件项链！'
+
+  #写多少注册多少
+
+  # 项链2:
+  #   getlore: '项链'
+  #   equipTypeName: '项链'
+  #   slot:
+  #   x: 146
+  #     y: 90
+  #   itemHasImage:
+  #     x: 146
+  #     y: 90
+  #     w: 25
+  #     h: 25
+  #   Button:
+  #     x: 137
+  #     y: 111
+  #     w: 35
+  #     h: 12
+  #     url1: '[local]Button.png'
+  #     url2: '[local]Button_.png'
+  #     addButton:
+  #       id: 6682
+  #       name: '挂上项链'
+  #       text:
+  #       - '§7点击穿上一件项链！'
+  #     delButton:
+  #       id: 6683
+  #       name: '取下项链'
+  #       text:
+  #       - '§7点击脱下一件项链！'
+  披风:
+    getlore: '披风'
+    equipTypeName: '披风'
+    slot:
+      x: 146
+      y: 131
+    itemHasImage:
+      x: 146
+      y: 131
+      w: 25
+      h: 25
+    Button:
+      x: 137
+      y: 152
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6684
+        name: '系上披风'
+        text:
+        - '§7点击穿上一件披风！'
+      delButton:
+        id: 6685
+        name: '脱下披风'
+        text:
+        - '§7点击脱下一件披风！'
+  衬衫:
+    getlore: '衬衫'
+    equipTypeName: '衬衫'
+    slot:
+      x: 146
+      y: 170
+    itemHasImage:
+      x: 146
+      y: 170
+      w: 25
+      h: 25
+    Button:
+      x: 137
+      y: 191
+      w: 35
+      h: 12
+      url1: '[local]Button.png'
+      url2: '[local]Button_.png'
+      addButton:
+        id: 6686
+        name: '穿上衬衫'
+        text:
+        - '§7点击穿上一件衬衫！'
+      delButton:
+        id: 6687
+        name: '脱下衬衫'
+        text:
+        - '§7点击脱下一件衬衫！'
+#套装显示界面
+Suit:
+  Button:
+    id: 6688
+    name: '套装'
+    x: 80
+    y: 191
+    w: 35
+    h: 12
+    url1: '[local]Button.png'
+    url2: '[local]Button_.png'
+    format: '§a<suit> §c套装 §9件数 §b<amount>'

@@ -1,0 +1,18 @@
+#打开该装备栏gui的按键设置
+# 21 为按键上的 Y 键
+#需要知道具体的按键id，请使用 VexKeyBoardHelper 插件，开启调试模式
+OpenEquipmentGUI_KEY: 21
+#启用套装
+EnableSuit: true
+#一些信息类文本
+Message:
+  add_Equip: '&a你穿上了 {0} &a!'
+  del_Equip: '&7你脱下了 {0} &7!'
+  amount_big: '&c请不要堆叠物品，这样不可以穿戴！'
+  amount_zero: '&7你没有放上物品！'
+  no_type: '&7你放上的装备不对！该位置仅允许穿戴 {0} 类型的装备！'
+  no_level: '&7你的等级没有达到使用 {0} 的要求！'
+  no_inventory_size: '&7你的背包满了！无法卸下~'
+#为特殊的装备设置gui内的贴图显示，左边是装备名称，不需要颜色代码，右边是贴图位置
+displayNameUrl:
+  '测试装备': '[local]fushou1.png'
